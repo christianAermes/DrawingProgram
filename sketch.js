@@ -139,7 +139,11 @@ $(document).ready(()=>{
       p.clear()
       canvas.background(255)
       history = []
-    })
+    });
+    $("#save").on("click", ()=>{
+      // save canvas as .png image
+      p.save(canvas, "Image.png");
+    });
     
     p.draw = function() {
       // only draw when the mouse is pressed down
