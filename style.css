@@ -1,0 +1,147 @@
+:root {
+  --shadowColor: #aaaaaa55;
+  --contour: #666;
+  --CH: min(55vw, 90vh);
+}
+
+body, html {
+  padding: 10px;
+  margin: auto;
+  background: #efefef
+}
+
+
+.container {
+  margin: auto;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 25% 70%;
+  column-gap: 10px;
+}
+
+
+#canvasContainer {
+  max-height: 90vh;
+}
+canvas {
+  border-radius: 10px;
+  border: 1.5px solid var(--contour);
+  box-shadow: 0px 0px 12px 1px var(--shadowColor),
+              0px 0px 12px 1px var(--shadowColor),
+              0px 0px 12px 1px var(--shadowColor),
+              0px 0px 12px 1px var(--shadowColor);
+}
+
+.sp-container {
+  width: 100%;
+  border: 1.5px solid var(--contour);
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px 1px var(--shadowColor),
+              0px 0px 12px 1px var(--shadowColor),
+              0px 0px 12px 1px var(--shadowColor),
+              0px 0px 12px 1px var(--shadowColor);
+  background: white;
+}
+.sp-palette-container {
+  width: 100%;
+}
+.sp-palette {
+  width: 100%;
+}
+.sp-picker-container {
+  width: 90%;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--contour);
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.drawShape {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--contour);
+}
+
+#drawCircle {
+  border-radius: 50%;
+}
+
+#drawTriangle {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  background: transparent;
+  border: none;
+/*  border: 1px solid red;*/
+  
+}
+#drawTriangle #TrBody{
+  width: 0;
+  height: 0;
+  border-left: 18.5px solid transparent;
+  border-right: 18.5px solid transparent;
+  border-bottom: 37px solid red;
+  position:relative;
+  top: -45.5px;
+  left: -12.0px;
+}
+
+#drawTriangle #TrBorder {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid var(--contour);
+  position:relative;
+  top: -8px;
+  left: -13px;
+}
+
+#drawLine {
+  width: 57px;
+  height: 19px;
+  border-radius: 9.5px;
+}
+
+
+button {
+  margin-top: 10px;
+}
+
+.active {
+  border: none;
+  box-shadow: 0px 0px 0px 2.5px rgb(163,202,208),
+              0px 0px 0px 1px rgb(163,202,208) inset;
+}

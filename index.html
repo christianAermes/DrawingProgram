@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <meta charset="utf-8"/>
+    <script src="addons/p5.min.js"></script>
+<!--    <script src="/addons/p5.dom.min.js"></script>-->
+    <script src="addons/p5.dom.js"></script>
+    <script src="addons/p5.sound.min.js"></script>
+    <script src="jquery/dist/jquery.min.js"></script>
+    
+    <link rel="stylesheet" media="screen" type="text/css" href="colorpicker/css/colorpicker.css" />
+    <script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
+    <script src='spectrum/spectrum.js'></script>
+    <link rel='stylesheet' href='spectrum/spectrum.css' />
+    
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="controls">
+        <div id="colorpicker"></div>
+        <label for="thickness">Thickness:</label><span id="thicknessValue"></span>
+        <input type="range", min="1" max="150" value="50" class="slider" id="thickness">
+        
+        <label for="ratio">Ratio:</label><span id="ratioValue"></span>
+        <input type="range", min="0.2" max="5" value="1" step="0.01" class="slider" id="ratio">
+        
+        <label for="rotation">Rotation:</label><span id="rotationValue"></span>
+        <input type="range", min="0" max="360" value="0" step="1" class="slider" id="rotation">
+        
+        <div id="shapes">
+          <button id="drawCircle" class="btn drawShape"></button>
+          <button id="drawRect" class="btn drawShape"></button>
+<!--          <button id="drawTriangle" class="btn drawShape"></button>-->
+          <button id="drawTriangle" class="btn drawShape">
+            <div id="TrBorder"></div>
+            <div id="TrBody"></div>
+          </button>
+          <button id="drawLine" class="btn drawShape"></button>
+        </div>
+        <button id="clearBtn" class="btn btn-danger">X</button>
+        <button id="undo" class="btn btn-primary">undo</button>
+      </div>
+
+      <div id="canvasContainer">
+      </div>
+    </div>
+  </body>
+</html>
